@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, StyledButton } from "../button/StyledButton";
+import {StyledButton } from "../button/StyledButton";
 
 export const ContactForm = () => {
     return (

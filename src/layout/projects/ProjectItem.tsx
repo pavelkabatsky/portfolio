@@ -8,9 +8,9 @@ type ProjectItemPropsType = {
 export const ProjectItem = (props: ProjectItemPropsType) => {
   return (
     <>
-      {props.data.map((item) => {
+      {props.data.map((item, index) => {
         return (
-          <StyledProjectItem>
+          <StyledProjectItem key={index}>
             <img src={item.imgUrl} alt="#" />
             <div className="content">
               <h3>{item.title}</h3>
