@@ -25,6 +25,6 @@ export const Socials = () => {
 
 const StyledSocials = styled.ul`
     display: flex;
-    gap: 10px;
-    list-style: none;
+    align-items: center;
+    gap: 20px;
 `

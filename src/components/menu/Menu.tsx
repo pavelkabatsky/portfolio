@@ -1,26 +1,45 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { theme } from "../../styles/theme";
 
 export const Menu = () => {
-    return (
-        <StyledMenu>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Tech Stack</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </StyledMenu>
-    )
-}
+  return (
+    <StyledMenu>
+      <MenuList>
+        <MenuItem>
+          <Link href="#">Home</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href="#">About</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href="#">Tech Stack</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href="#">Projects</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href="#">Contact</Link>
+        </MenuItem>
+      </MenuList>
+    </StyledMenu>
+  );
+};
 
 const StyledMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 10px;
-        list-style:none;
-    }
-    a {
-        text-decoration:none;
-    }
-`
+  font-family: "DM Sans", system-ui;
+  font-weight: 600;
+  font-size: 20px;
+`;
+const MenuList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 60px;
+`;
+
+const MenuItem = styled.li`
+
+`;
+
+const Link = styled.a`
+  color: ${theme.colors.secondary};
+`;
