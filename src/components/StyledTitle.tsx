@@ -1,25 +1,18 @@
 import styled from "styled-components";
+import { theme } from "../styles/theme";
+import { font } from "../styles/font";
 
-type StyledTitleProps = {
-    weight?: number;
-    fz? : number;
-}
+export const StyledTitle = styled.h2`
+    text-align: center;
+    ${font({ weight: 700, Fmax: 58, Fmin: 42 })}
+`;
 
-export const StyledTitle = styled.h2<StyledTitleProps>`
-    font-weight: ${ (props) => props.weight ||  700 };
-    font-size: ${ (props) => props.fz ||  58 + ' px'};
-    line-height:26px;
-    color:#42446E;
+export const StyledSubTitle = styled.h3`
+    ${font({ weight: 400, Fmax: 32, Fmin: 24, color: theme.colors.secondary })}
     text-align:center;
-    
+    margin: 50px 0 110px;
 
-`
-
-export const StyledSubTitle = styled.h2`
-    font-weight: 400;
-    font-size: 22px;
-    line-height:26px;
-    color:#666666;
-    text-align:center;
-
-`
+	@media ${theme.media.tablet} {
+		margin: 30px 0 80px;
+	}
+`;

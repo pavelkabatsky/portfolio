@@ -1,25 +1,37 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
 import { Socials } from "../../components/socials/Socials";
 import { Container } from "../../styles/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { S } from "./Header_styles/Header_styles";
+import { DesctopMenu } from "../../components/menu/desktopMenu/DesctopMenu";
+import React from "react";
+import { MobileMenu } from "../../components/menu/mobileMenu/MobileMenu";
+
+const items = ["Home", "About","Tech Stack","Propjects","Contacts"];
 
 export const Header = () => {
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexWrapper align="center" justify="space-between">
-            <Logo />
-            <Menu />
-            <Socials />
+          <Logo />
+          {width < breakpoint ? <MobileMenu menuItems={items}/> : <DesctopMenu menuItems={items}/>}
+          <Socials />
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
 
-const StyledHeader = styled.header`
-    padding: 40px 0px;
-  
-`;
+
+
+

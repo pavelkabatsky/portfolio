@@ -7,10 +7,12 @@ export const GlobalStyles = createGlobalStyle`
 *::after {
     margin: 0;
     padding:0;
+    box-sizing: border-box;
 }
 
 a {
     text-decoration:none;
+    
 }
 
 ul {
@@ -30,5 +32,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.secondary};
+  min-width: 360px;
+}
+
+section {
+  padding: 100px 0;
+
+  @media ${theme.media.tablet} {
+    padding: 50px 0;
+  }
 }
 `

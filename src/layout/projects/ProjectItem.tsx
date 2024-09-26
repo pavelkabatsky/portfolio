@@ -1,47 +1,46 @@
-import styled from "styled-components";
-import { ProjectItemLinks } from "./ProjectItemLinks";
+import { PojectItemLink } from "./PojectItemLink";
+import { StyledButton } from "../../components/button/StyledButton";
+import {S} from "./Projects_styles"
 
 type ProjectItemPropsType = {
   data: Array<any>;
 };
 
-export const ProjectItem = (props: ProjectItemPropsType) => {
+export const ProjectItem: React.FC<ProjectItemPropsType> = (props: ProjectItemPropsType) => {
   return (
     <>
       {props.data.map((item, index) => {
         return (
-          <StyledProjectItem key={index}>
-            <img src={item.imgUrl} alt="#" />
-            <div className="content">
-              <h3>{item.title}</h3>
-              <p>
-                {item.text}
-              </p>
-              <p>
+          <S.ProjectItem key={index}>
+            <S.ImgWrapper>
+              <img src={item.imgUrl} alt="#" />
+              <StyledButton>Viev Project</StyledButton>
+            </S.ImgWrapper>
+
+            <S.ContentWrapper>
+              <S.ContentTitle>{item.title}</S.ContentTitle>
+              <S.ContentText>{item.text}</S.ContentText>
+              <S.StackText>
                 <span>Tech stack :</span> {item.stack}
-              </p>
-              <ProjectItemLinks />
-            </div>
-          </StyledProjectItem>
+              </S.StackText>
+              <S.LinksWrapper>
+                <PojectItemLink
+                  text="Live Preview"
+                  iconId="link"
+                  href="https://developer.mozilla.org/en-US/"
+                />
+                <PojectItemLink
+                  text="View Code"
+                  iconId="git"
+                  href="https://developer.mozilla.org/en-US/"
+                />
+              </S.LinksWrapper>
+            </S.ContentWrapper>
+          </S.ProjectItem>
         );
       })}
     </>
   );
 };
 
-const StyledProjectItem = styled.div`
-  width: 375px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 100px 18px rgba(0, 0, 0, 0.2);
-  margin-bottom: 62px;
 
-  img {
-    width: 100%;
-    height:260px;
-    object-fit:cover;
-  }
-
-  .content {
-    padding: 30px;
-  }
-`;

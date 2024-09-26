@@ -5,6 +5,7 @@ import { Header } from './layout/header/Header';
 import { Main } from './layout/main/Main';
 import { Projects } from './layout/projects/Projects';
 import { Skills } from './layout/skills/Skills';
+import { Testimonials } from './layout/testimonials/Testimonials';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Main/>
             <Skills/>
             <Projects/>
+            <Testimonials/>
             <Contacts/>
             <Footer/>
         </div>

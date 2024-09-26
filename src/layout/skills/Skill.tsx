@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
-import { FlexWrapper } from "../../components/FlexWrapper";
+import { S } from "./Skills_styles";
 
 type SkillPropsType = {
     iconId : string;
@@ -8,12 +7,10 @@ type SkillPropsType = {
 
 export const Skill = (props:SkillPropsType) => {
     return (
-        <SlillIconWrapper>
-            <Icon width="120" height="120" viewBox="0 0 120 120 " iconId = {props.iconId}/>
-        </SlillIconWrapper>
+        <S.SkillIconWrapper>
+            <Icon width="110" height="110" viewBox="0 0 110 110 " iconId = {props.iconId}/>
+        </S.SkillIconWrapper>
     );
 }
 
-const SlillIconWrapper = styled.div`
 
-`

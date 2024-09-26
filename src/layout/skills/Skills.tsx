@@ -1,28 +1,28 @@
+
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { StyledSubTitle, StyledTitle } from "../../components/StyledTitle";
 import { Skill } from "./Skill";
+import { Container } from "../../styles/Container";
+import { S } from "./Skills_styles";
+
+const skillsData = ["html","css","js","react","vector","bootstrap","tailwind","sass","git-icon","vscode","github","greensock"]
 
 export const Skills = () => {
   return (
-    <section>
-      <StyledTitle>My Tech Stack</StyledTitle>
-      <StyledSubTitle>
-        Technologies I’ve been working with recently
-      </StyledSubTitle>
-      <FlexWrapper justify="space-between">
-        <Skill iconId="html" />
-        <Skill iconId="css" />
-        <Skill iconId="js" />
-        <Skill iconId="react       " />
-        <Skill iconId="vector" />
-        <Skill iconId="bootstrap" />
-        <Skill iconId="tailwind" />
-        <Skill iconId="sass" />
-        <Skill iconId="git-icon" />
-        <Skill iconId="greensock" />
-        <Skill iconId="vscode" />
-        <Skill iconId="github" />
-      </FlexWrapper>
-    </section>
+    <S.Skills>
+      <Container>
+        <StyledTitle>My Tech Stack</StyledTitle>
+        <StyledSubTitle>
+          Technologies I’ve been working with recently
+        </StyledSubTitle>
+        <FlexWrapper justify="flex-start">
+          {skillsData.map((item , index) => {
+            return <Skill iconId={item} key={index}/>
+          })}
+        </FlexWrapper>
+      </Container>
+    </S.Skills>
   );
 };
+
+

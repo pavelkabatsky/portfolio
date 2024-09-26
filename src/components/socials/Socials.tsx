@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { theme } from "../../styles/theme";
 
 export const Socials = () => {
   return (
@@ -24,7 +25,23 @@ export const Socials = () => {
 };
 
 const StyledSocials = styled.ul`
-    display: flex;
-    align-items: center;
-    gap: 20px;
-`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    color: ${theme.colors.secondary};
+    display: inline-block;
+    
+
+    &:hover {
+      color: ${theme.colors.primary};
+      transform: scale(1.3);
+      transition: 0.3s ease;
+    }
+  }
+
+  @media ${theme.media.smallDesktop} {
+    display: none;
+  }
+`;

@@ -1,45 +1,19 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
+import { S } from "./menu_styles";
 
-export const Menu = () => {
+export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
+  menuItems: Array<string>;
+}) => {
   return (
-    <StyledMenu>
-      <MenuList>
-        <MenuItem>
-          <Link href="#">Home</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="#">About</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="#">Tech Stack</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="#">Projects</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link href="#">Contact</Link>
-        </MenuItem>
-      </MenuList>
-    </StyledMenu>
+    <S.MenuList>
+    	{props.menuItems.map((item, index) => {
+			return (
+			<S.MenuItem key={index}>
+				<S.Link href="#">{item}</S.Link>
+			</S.MenuItem>
+			);
+    	})}
+    </S.MenuList>
   );
 };
-
-const StyledMenu = styled.nav`
-  font-family: "DM Sans", system-ui;
-  font-weight: 600;
-  font-size: 20px;
-`;
-const MenuList = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 60px;
-`;
-
-const MenuItem = styled.li`
-
-`;
-
-const Link = styled.a`
-  color: ${theme.colors.secondary};
-`;
