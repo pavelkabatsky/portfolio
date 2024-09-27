@@ -1,6 +1,7 @@
 import { PojectItemLink } from "./PojectItemLink";
 import { StyledButton } from "../../components/button/StyledButton";
 import {S} from "./Projects_styles"
+import React from "react";
 
 type ProjectItemPropsType = {
   data: Array<any>;

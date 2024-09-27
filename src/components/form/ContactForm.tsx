@@ -1,49 +1,17 @@
-import styled from "styled-components";
-import {StyledButton } from "../button/StyledButton";
-import { theme } from "../../styles/theme";
 
-export const ContactForm = () => {
+import React from "react";
+import {StyledButton } from "../button/StyledButton";
+import {S} from "./ContactForm_Styles";
+
+export const ContactForm:React.FC = () => {
     return (
-        
-        <StyledForm>
-            <Field placeholder="name"/>
-            <Field placeholder="subject"/>
-            <Field placeholder="message" as="textarea"/>
+        <S.Form>
+            <S.Field placeholder="name"/>
+            <S.Field placeholder="subject"/>
+            <S.Field placeholder="message" as="textarea"/>
             <StyledButton type="submit">
                 Send Message!
             </StyledButton>
-        </StyledForm>
+        </S.Form>
     );
 }
- 
-const StyledForm = styled.form`
-    max-width:500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
-    margin: 30px 0;
-
-    textarea {
-        height: 150px;
-        resize: none;
-        margin-bottom: 30px;
-    }
-`
-const Field = styled.input`
-    width: 100%;
-    padding:7px 15px;
-    font-family: "Dm sans", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    
-
-    &::placeholder {
-        font-size: 18px;
-        text-transform: capitalize;
-        color: ${theme.colors.primary}
-    }
-
-    
-`

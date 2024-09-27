@@ -1,4 +1,3 @@
-import styled, { css } from "styled-components";
 import { Menu } from "../Menu";
 import { BurgerButton } from "../burgerButton/BurgerButton";
 import { S } from "../menu_styles";

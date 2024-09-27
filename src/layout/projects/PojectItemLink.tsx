@@ -7,7 +7,7 @@ type PojectItemLinkPropsType = {
     text : string
 }
 
-export const PojectItemLink = (props: PojectItemLinkPropsType) => {
+export const PojectItemLink:React.FC<PojectItemLinkPropsType> = (props: PojectItemLinkPropsType) => {
   return (
     <div>
       <Icon width="20px" height="20px" viewBox="0 0 30 30" iconId={props.iconId} />

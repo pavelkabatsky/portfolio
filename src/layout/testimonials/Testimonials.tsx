@@ -3,7 +3,7 @@ import { StyledSubTitle, StyledTitle } from "../../components/StyledTitle";
 import { Slider } from "../../components/slider/Slider";
 import { Container } from "../../styles/Container";
 
-export const Testimonials = () => {
+export const Testimonials: React.FC = () => {
   return (
     <StyledTestimonials>
       <Container>

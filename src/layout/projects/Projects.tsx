@@ -5,8 +5,9 @@ import { Container } from "../../styles/Container";
 import { ProjectItem } from "./ProjectItem";
 import { dataProjects } from "./dataProjects";
 import { S } from "./Projects_styles";
+import React from "react";
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
     <S.Projects>
       <Container>
