@@ -1,4 +1,4 @@
-import styled from "styled-components";
+
 import { Logo } from "../../components/logo/Logo";
 import { Socials } from "../../components/socials/Socials";
 import { Container } from "../../styles/Container";
@@ -13,7 +13,7 @@ const items = ["Home", "About","Tech Stack","Propjects","Contacts"];
 export const Header = () => {
 
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 768;
+  const breakpoint = 769;
 
   React.useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));

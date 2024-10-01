@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { theme } from "../../styles/theme";
+
 import { S } from "./menu_styles";
 
 export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {

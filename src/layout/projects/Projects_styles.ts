@@ -18,11 +18,11 @@ const ProjectItem = styled.div`
   box-shadow: 4px 4px 100px 18px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
-  /* flex-grow: 1; */
+  
 
   img {
     width: 100%;
-    min-height: 260px;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -66,6 +66,7 @@ const LinksWrapper = styled.div`
 `;
 const ImgWrapper = styled.div`
   position: relative;
+  min-height: 260px;
 
   &::before {
     content: "";

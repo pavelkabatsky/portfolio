@@ -1,4 +1,5 @@
 import './App.css';
+import { About } from './layout/about/About';
 import { Contacts } from './layout/contacts/Contacts';
 import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
@@ -13,6 +14,7 @@ function App() {
         <div className="App">
             <Header/>
             <Main/>
+            <About/>
             <Skills/>
             <Projects/>
             <Testimonials/>

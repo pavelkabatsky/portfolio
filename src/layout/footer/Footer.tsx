@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
         <S.FooterBottom>
           
             <small>
-              Designed and built by <span>Pavel Kabatsky</span> with{" "}
+              Designed and built by <span>Pavel Kabatsky</span> with
               <span>Love</span> & <span>Cofee</span>
             </small>
 

@@ -33,13 +33,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.secondary};
   min-width: 360px;
+  
 }
 
 section {
   padding: 100px 0;
-
-  @media ${theme.media.tablet} {
-    padding: 50px 0;
-  }
 }
 `
