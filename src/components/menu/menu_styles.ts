@@ -76,10 +76,6 @@ const MenuItem = styled.li<{active?: boolean}>`
         a {
             color: ${theme.colors.primary};
         }
-
-        &::before {
-            width: 100%;
-        }
     }
 
 

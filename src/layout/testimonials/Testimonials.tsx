@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { StyledSubTitle, StyledTitle } from "../../components/StyledTitle";
-import { Slider } from "../../components/slider/Slider";
+import  {SimpleSlider} from "../../components/slider/Slider";
 import { Container } from "../../styles/Container";
 
 export const Testimonials: React.FC = () => {
@@ -9,7 +9,7 @@ export const Testimonials: React.FC = () => {
       <Container>
         <StyledTitle>Testimonials</StyledTitle>
         <StyledSubTitle>What People Says</StyledSubTitle>
-        <Slider />
+        <SimpleSlider />
       </Container>
     </StyledTestimonials>
   );

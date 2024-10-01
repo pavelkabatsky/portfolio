@@ -22,9 +22,7 @@ const About = styled.section`
 const AboutWrapper = styled.div`
     max-width: 710px;
     width: auto;
-    z-index: 2;
     
-
     @media ${theme.media.veryLargeDesktop} {
         position: relative;
         ::before {
@@ -35,7 +33,6 @@ const AboutWrapper = styled.div`
             position: absolute;
             right: -200px;
             top: 0%;
-            z-index: 1;
             transform: translate(100%, -10%);
         }
     }
