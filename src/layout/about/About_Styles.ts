@@ -9,6 +9,7 @@ import { StyledTitle } from "../../components/StyledTitle";
 const About = styled.section`
     position: relative;
     overflow: hidden;
+    z-index: 1;
 
     ${StyledTitle} {
         ${font({ Fmax: 42, Fmin: 32, weight: 700 })}
@@ -35,6 +36,9 @@ const AboutWrapper = styled.div`
             top: 0%;
             transform: translate(100%, -10%);
         }
+    }
+    @media ${theme.media.largeDesktop} {
+        margin: 0 auto;
     }
     
 `;
@@ -68,6 +72,8 @@ const ItemTop = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
+    align-items: flex-start;
+    gap: 15px;
 `;
 
 const ItemBottom = styled.div`
@@ -87,6 +93,7 @@ const Shedule = styled.span`
     background-color: #d7ffe0;
     border-radius: 100px;
     padding: 7px 20px;
+    flex-shrink: 0;
 `;
 
 const BottomItem = styled.div`

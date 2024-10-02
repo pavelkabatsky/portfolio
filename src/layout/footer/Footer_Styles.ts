@@ -1,9 +1,16 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { Container } from "../../styles/Container";
 
 const Footer = styled.section`
+  position: static;
   padding-bottom: 60px;
+
+  ${Container} {
+    position: relative;
+    background-color: rgba(255,255,255,0.5);
+  }
 
   @media ${theme.media.mobile} {
     padding: 15px 0;

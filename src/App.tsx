@@ -1,4 +1,6 @@
+
 import './App.css';
+import { Particle } from './components/particle/Particle';
 import { About } from './layout/about/About';
 import { Contacts } from './layout/contacts/Contacts';
 import { Footer } from './layout/footer/Footer';
@@ -12,6 +14,7 @@ import { Testimonials } from './layout/testimonials/Testimonials';
 function App() {
     return (
         <div className="App">
+            {/* <Particle/> */}
             <Header/>
             <Main/>
             <About/>

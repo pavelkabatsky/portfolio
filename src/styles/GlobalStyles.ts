@@ -37,6 +37,8 @@ body {
 }
 
 section {
+  position: relative;
   padding: 100px 0;
+  background-color: #fff;
 }
 `
