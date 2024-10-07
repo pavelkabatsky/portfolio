@@ -1,5 +1,6 @@
 
 import './App.css';
+import { GoUpButton } from './components/goUpButton/GoUpButton';
 import { Particle } from './components/particle/Particle';
 import { About } from './layout/about/About';
 import { Contacts } from './layout/contacts/Contacts';
@@ -14,7 +15,7 @@ import { Testimonials } from './layout/testimonials/Testimonials';
 function App() {
     return (
         <div className="App">
-            {/* <Particle/> */}
+            <Particle/>
             <Header/>
             <Main/>
             <About/>
@@ -23,6 +24,7 @@ function App() {
             <Testimonials/>
             <Contacts/>
             <Footer/>
+            <GoUpButton/>
         </div>
     );
 }

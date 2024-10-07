@@ -4,13 +4,12 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../styles/Container";
 import { S } from "./main_styles";
 import Typewriter from 'typewriter-effect';
-import { Particle } from "../../components/particle/Particle";
+
 
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
-            <Particle/>
+        <S.Main id={"home"}>
             <Container>
                 <FlexWrapper align="center" justify="space-between">
                     <S.Head>

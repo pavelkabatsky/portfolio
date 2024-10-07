@@ -6,7 +6,7 @@ export const theme = {
         primaryDarkMode : "#CCC",
         cardsDarkMode : "#363636",
         gradient : "linear-gradient(90deg, #94c901, #2AA5A0)",
-        mobileMenu: "#fff",
+        mobileMenu: "rgba(255,255,255,0.9)",
     },
 
     media : {

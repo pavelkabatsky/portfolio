@@ -20,34 +20,34 @@ const Photo = styled.img`
     object-fit: cover;
 `;
 const Main = styled.section`
+    position: static;
     display: flex;
     align-items: center;
     min-height: 100vh;
     justify-content: center;
+    /* background-color: transparent; */
 
     ${FlexWrapper} {
         gap: 50px;
         flex-wrap: nowrap;
 
         @media ${theme.media.veryLargeDesktop} {
-
         }
         @media ${theme.media.smallDesktop} {
             flex-direction: column;
             align-items: center;
         }
         @media ${theme.media.tablet} {
-            
         }
     }
 `;
 
 const Head = styled.h1`
     ${font({ weight: 700, Fmax: 58, Fmin: 40 })}
-    max-width: 50%; 
-    background-color: rgba(255,255,255,0.7);
+    max-width: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
     position: relative;
-    
+
     p {
         background-color: #94c901;
         background-image: ${theme.colors.gradient};
@@ -60,7 +60,6 @@ const Head = styled.h1`
     }
 
     @media ${theme.media.largeDesktop} {
-        
     }
 
     @media ${theme.media.smallDesktop} {
@@ -69,7 +68,6 @@ const Head = styled.h1`
         margin-bottom: 40px;
         text-align: center;
     }
-    
 `;
 
 export const S = {

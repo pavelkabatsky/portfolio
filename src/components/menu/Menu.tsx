@@ -1,15 +1,42 @@
 
 import { S } from "./menu_styles";
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
-  menuItems: Array<string>;
-}) => {
+const menuItems = [
+	{
+		title : "Home",
+		href : "home"
+	},
+	{
+		title : "About",
+		href : "about"
+	},
+	{
+		title : "Tech Stack",
+		href : "stack"
+	},
+	{
+		title : "Projects",
+		href : "projects"
+	},
+	{
+		title : "Contacts",
+		href : "contacts"
+	},
+]
+
+export const Menu:React.FC = () => {
   return (
     <S.MenuList>
-    	{props.menuItems.map((item, index) => {
+    	{menuItems.map((item, index) => {
 			return (
 			<S.MenuItem key={index}>
-				<S.Link href="#">{item}</S.Link>
+				<S.NavLink  href={`#${item.href}`} 
+							activeClass="active"
+      						to={item.href}
+							smooth={true}
+							spy={true}>
+								{item.title}
+				</S.NavLink>
 			</S.MenuItem>
 			);
     	})}

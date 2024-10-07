@@ -41,7 +41,7 @@ const EducationData = [
 
 export const About: React.FC = () => {
     return (
-        <S.About>
+        <S.About id={"about"}>
             <Container>
                 <S.AboutWrapper>
                     <StyledTitle>About Me</StyledTitle>

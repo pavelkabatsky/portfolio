@@ -8,7 +8,7 @@ import {S} from "./Contacts_Styles"
 
 export const Contacts:React.FC = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id={"contacts"}>
       <Container>
         <StyledTitle>Contacts</StyledTitle>
         <FlexWrapper justify="space-around" align="center">

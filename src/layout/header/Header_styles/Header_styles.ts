@@ -7,7 +7,7 @@ const Header = styled.header`
   right: 0;
   top: 0;
   background-color: #ffffffd8;
-  z-index: 1;
+  z-index: 999999;
 `;
 
 export const S = {

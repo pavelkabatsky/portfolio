@@ -12,4 +12,10 @@ export const StyledButton = styled.button`
     letter-spacing: 1px;
     cursor: pointer;
     border-radius: 20px;
+
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.1) ;
+    }
 `

@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/theme";
 import { font } from "../../styles/font";
+import { Link } from 'react-scroll';
 
 // Mobile Menu
 const MobileMenu = styled.nav`
@@ -77,12 +78,28 @@ const MenuItem = styled.li<{active?: boolean}>`
             color: ${theme.colors.primary};
         }
     }
-
-
 `;
 
-const Link = styled.a`
+const NavLink = styled(Link)`
     color: ${theme.colors.secondary};
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 0%;
+        height: 2px;
+        background-color: ${theme.colors.primary};
+
+        position: absolute;
+        bottom: 0;
+        transition: 0.3s ease;
+    }
+
+    &.active {
+        &::before {
+            width: 100%
+        }
+    }
 `;
 
 // Desktop Menu
@@ -102,6 +119,6 @@ export const S = {
     MobileMenu,
     MenuList,
     MenuItem,
-    Link,
+    NavLink,
     StyledMenu,
 };

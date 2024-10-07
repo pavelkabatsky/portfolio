@@ -14,10 +14,12 @@ const ProjectItem = styled.div`
   flex-direction: column;
   max-width: 375px;
   width: 100%;
+  height: 100%;
   border-radius: 20px;
   box-shadow: 4px 4px 100px 18px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  background-color: #fff;
   
 
   img {
@@ -26,10 +28,7 @@ const ProjectItem = styled.div`
     object-fit: cover;
   }
 
-  @media ${theme.media.largeDesktop} {
-    max-width: 45%;
-  }
-  @media ${theme.media.tablet} {
+  @media ${theme.media.mobile} {
     max-width: 100%;
   }
 `;
@@ -79,6 +78,8 @@ const ImgWrapper = styled.div`
     background: rgba(0, 0, 0, 0.3);
     opacity: 0;
 
+    
+
     @media ${theme.media.smallDesktop} {
       opacity: 1;
     }
@@ -88,8 +89,8 @@ const ImgWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     opacity: 0;
+    transform: translate(-50%, -30%);
     @media ${theme.media.smallDesktop} {
       opacity: 1;
     }
@@ -98,10 +99,16 @@ const ImgWrapper = styled.div`
   &:hover {
     ${StyledButton} {
       opacity: 1;
-      transition: 0.3s ease;
+      transform: translate(-50%, -50%);
+    }
+
+    
+    &::before {
+      opacity: 1;
     }
   }
-`;
+  
+`
 const PojectItemLink = styled.a`
   font-weight: 400;
   font-size: 16px;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { font } from "../../styles/font";
 import { S } from "../../components/menu/menu_styles";
 
 export type TabsStatusType = "all" | "react" | "landing" | "spa"
